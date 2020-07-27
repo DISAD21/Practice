@@ -24,8 +24,18 @@ public class Startup {
             System.out.println("Спать = " + Sleep);
         }
 */
+/* 4 задача
+            int[] a = {1,2,3,4,3,2,1};
+            boolean t = true;
+            for(int i=0;i<a.length;i++)
+                if(a[i]!=a[a.length-i-1])t=false;
+            System.out.println(t?"Это полиндром ":" Это не полиндром");
+*/
             
-
-
-
+        }
 }
+
+
+
+
+
