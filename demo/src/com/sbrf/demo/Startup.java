@@ -1,6 +1,7 @@
 package com.sbrf.demo;
 import java.util.Scanner;
 import java.util.Random;
+import java.util.*;
 
 public class Startup {
 
@@ -161,5 +162,25 @@ public class Startup {
                         }
                 }
 */
+/* Задача 14
+                Scanner sc = new Scanner(System.in);
+                char ch = (char) ('a' + new Random().nextInt(26));
+                System.out.println(ch);
+                System.out.println("Guess the letter!");
+                for (char i = 0; i < 26; i++) {
+                        char s = sc.next().charAt(0);
+                        if (ch == s) {
+                                System.out.println("Right");
+                                break;
+                        } else {
+                                System.out.println("try again");
+                                if (Character.getNumericValue(ch) > Character.getNumericValue(s)) {
+                                        System.out.println("You’re too low");
+                                } else if (Character.getNumericValue(ch) < Character.getNumericValue(s)) {
+                                        System.out.println("You’re too high");
+                                }
+                        }
+                }
+ */
         }
 }
