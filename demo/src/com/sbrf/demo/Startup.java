@@ -116,7 +116,16 @@ public class Startup {
                 int a = 1;
                 int b = 100;
                 System.out.println((int)(Math.random()*((b+1)-a)+a));
- */
+*/
+/* Задача 12
+                Scanner in = new Scanner(System.in);
+                String s; String lxa;
+                int a;
+                s = in.nextLine();
+                a = in.nextInt();
+                lxa = s.substring(0, a) + s.substring(a+1);
+                System.out.println(lxa);
+*/
         }
 }
 
