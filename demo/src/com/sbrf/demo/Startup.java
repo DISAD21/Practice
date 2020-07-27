@@ -31,7 +31,12 @@ public class Startup {
                 if(a[i]!=a[a.length-i-1])t=false;
             System.out.println(t?"Это полиндром ":" Это не полиндром");
 */
-            
+/* 5 задача
+            int n = 123;
+            int a = (n%10)+((n/10)%10)+((n/100)%10);
+            System.out.println("Сумма цифр числа " + n +" равна " + a);
+*/
+
         }
 }
 
