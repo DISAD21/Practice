@@ -112,6 +112,11 @@ public class Startup {
                 b=c;
             }
 */
+/* 11 задача
+                int a = 1;
+                int b = 100;
+                System.out.println((int)(Math.random()*((b+1)-a)+a));
+ */
         }
 }
 
