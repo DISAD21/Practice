@@ -1,5 +1,6 @@
 package com.sbrf.demo;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Startup {
 
@@ -126,11 +127,39 @@ public class Startup {
                 lxa = s.substring(0, a) + s.substring(a+1);
                 System.out.println(lxa);
 */
+/* Задача 13
+                Random r = new Random();
+                Scanner in = new Scanner(System.in);
+                int n;
+                System.out.println("Введите размер массива: ");
+                n=in.nextInt();
+                double[] myArray;
+                myArray = new double[n];
+                for (int i=0;i<n;i++)
+                {
+                 myArray[i]=(int) r.nextInt(50);
+                }
+                int nu=0;
+                int a;
+                while(nu!=3) {
+                        System.out.println("Интерфейс: \n1 - вывести массив; \n2 - увеличить элемент массива на 10%; \n3 - выход");
+                        nu = in.nextInt();
+                        switch (nu) {
+                                case 1:
+                                        for (int i = 0; i < n; i++) {
+                                                System.out.print(myArray[i] + " ");
+                                        }
+                                        System.out.println(" ");
+                                        break;
+                                case 2:
+                                        System.out.println("выбериете элемент массива размером " + n + " :");
+                                        a = in.nextInt();
+                                        myArray[a] =myArray[a] + myArray[a] * 0.1;
+                                        break;
+                                case 3:
+                                        break;
+                        }
+                }
+*/
         }
 }
-
-
-
-
-
-
