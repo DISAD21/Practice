@@ -208,5 +208,104 @@ public class Startup {
                         }
                 }
  */
+/* Задача 16
+                int ct = 0;
+                for (int i = 0; i < 50000; i++) {
+                        if (String.valueOf(i).contains("2")) {
+                                ct++;
+                        }
+                }
+                System.out.println(ct);
+ */
+/* Задача 17
+                int[][] arr = new int[6][7];
+                for (int i = 0; i < 6; ++i) {
+                        for (int j = 0; j < 7; ++j) {
+                                arr[i][j] = (int) (Math.random() * (9 - 0) + 0);
+                                System.out.print(arr[i][j] + " ");
+                        }
+                        System.out.println();
+                }
+
+                System.out.println();
+
+                for (int i = 0; i < 6; ++i)
+                        for (int j = 6; j >= 1; --j) {
+                                if (arr[i][j] > arr[i][j - 1]) {
+                                        int tmp = arr[i][j];
+                                        arr[i][j] = arr[i][j - 1];
+                                        arr[i][j - 1] = tmp;
+                                }
+                        }
+
+                for (int i = 0; i < 6; ++i) {
+                        for (int j = 0; j < 7; ++j) {
+                                System.out.print(arr[i][j] + " ");
+                        }
+                        System.out.println();
+                }
+*/
+/* Задача 18
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите значение a: ");
+        double a = in.nextDouble();
+        System.out.println("Введите значение  b: ");
+        double b = in.nextDouble();
+        System.out.println("Введите значение c: ");
+        double c = in.nextDouble();
+        double maxside = 0;
+        ArrayList list = new ArrayList<>();
+        list.add(a);
+        list.add(b);
+        list.add(c);
+        maxside = (double) Collections.max(list);
+        if(c >= a + b) {
+            System.out.println("Треугольник невозможен");
+        }else if(aa + bb - cc>0) {
+            System.out.println("Треугольник остроугольный");
+        }else if(aa + bb - cc == 0) {
+            System.out.println("Треугольник прямоугольный");
+        }else if(aa + bb - cc < 0) {
+            System.out.println("Треугольник тупоугольный");
+        }
+*/
+/* Задача 19
+                enum Numeral {
+                        I(1), IV(4), V(5), IX(9), X(10), XL(40), L(50), XC(90), C(100), CD(400), D(500), CM(900), M(1000);
+                        int weight;
+
+                        Numeral(int weight) {
+                                this.weight = weight;
+                        }
+                };
+
+                public static String roman(long n) {
+
+                        if( n <= 0) {
+                                System.out.println("Число должно быть больше нуля!");
+                        }
+
+                        StringBuilder buf = new StringBuilder();
+
+                        final Numeral[] values = Numeral.values();
+                        for (int i = values.length - 1; i >= 0; i--) {
+                                while (n >= values[i].weight) {
+                                        buf.append(values[i]);
+                                        n -= values[i].weight;
+                                }
+                        }
+                        return buf.toString();
+                }
+
+                public static void test(long n) {
+                        System.out.println(n + " = " + roman(n));
+                }
+                public static void main(String[] args) {
+                        Scanner in = new Scanner(System.in);
+                        System.out.println("Введите арабское число, которое нужно перевести в римское число: ");
+                        int a = in.nextInt();
+                        test(a);
+                }
+*/
         }
 }
