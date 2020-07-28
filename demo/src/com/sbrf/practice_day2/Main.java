@@ -49,7 +49,7 @@ class Vector {
     }
     @Override
     public String toString() {
-        return "Vector{" +
+        return "{" +
                 "x=" + x +
                 ", y=" + y +
                 ", z=" + z +
@@ -57,13 +57,14 @@ class Vector {
     }
 public static void main(String[] args) {
         Vector[] vectors = Vector.generate(5);
-        System.out.println(vectors[0]);
-        System.out.println(vectors[1]);
-        System.out.println(vectors[0].length());
-        System.out.println(vectors[0].scalarProduct(vectors[1]));
-        System.out.println(vectors[0].crossAddition(vectors[1]));
-        System.out.println(vectors[0].crossSubtraction(vectors[1]));
-        System.out.println(vectors[0].crossProduct(vectors[1]));
+        System.out.println("Вектор 1 = " + vectors[0]);
+        System.out.println("Вектор 2 = " + vectors[1]);
+        System.out.println("Длинна вектора 1 = " + vectors[0].length());
+        System.out.println("Длинна вектора 2 = " + vectors[1].length());
+        System.out.println("Скалярное произведение векторов 1 и 2 = " + vectors[0].scalarProduct(vectors[1]));
+        System.out.println("Векторное сложение векторов 1 и 2 = " + vectors[0].crossAddition(vectors[1]));
+        System.out.println("Векторное вычитание векторов 1 и 2 = " + vectors[0].crossSubtraction(vectors[1]));
+        System.out.println("Векторное произведение векторов 1 и 2 = " + vectors[0].crossProduct(vectors[1]));
         }
 }
 
