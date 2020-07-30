@@ -1,4 +1,6 @@
 package com.sbrf.practice_day3_List;
+import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
+
 import java.util.Scanner;
 
 public class List {
@@ -77,15 +79,24 @@ class LList {
     }
 
     public Object get(int id) {
-        if (id <= 0 || id > size()) {
-            return "Отсутствует";
-        } else {
+        try {
+            if (id <= 0 ) {
+                throw new IndexOutOfBoundsException();
+            }
             Node Value = root;
             for (int i = 0; i < id - 1; i++) {
                 Value = Value.next;
             }
             return Value.data;
+
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Выход за границы листа");
+            return " ";
+        } catch (NullPointerException e) {
+            System.out.println("Выход за границы листа");
+            return " ";
         }
+
     }
 
     private Node findLast() {
