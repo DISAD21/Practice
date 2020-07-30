@@ -1,42 +1,45 @@
 package com.sbrf.practice_day3_List;
-import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
-
+import com.sbrf.practice_day3_List.InputExceptions;
 import java.util.Scanner;
 
 public class List {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        LList ll = new LList();
-        int nu=0;
-        while(nu!=5) {
-            System.out.println("Выберите действие: \nДобавить элемент = 1 \nВывод элемента = 2 \nВывод всех элементов = 3 \nВывод количества позиций = 4 \nВыход = 5");
-            nu = in.nextInt();
-            switch (nu) {
-                case 1:
-                    System.out.println("Введите элемент:");
-                    String element = in.next();
-                    ll.add(element);
-                    break;
-                case 2:
-                    System.out.println("Выберите какой элемент вывести");
-                    int Conclusion = in.nextInt();
-                    System.out.println(ll.get(Conclusion));
-                    break;
-                case 3:
-                    int Conclusions = ll.size();
-                    for (int i=1; i <= Conclusions; i++) {
-                        System.out.println(ll.get(i));
-                    }
-                    break;
-                case 4:
-                    int cout = ll.size();
-                    System.out.println("Всего элементов = "+ cout);
-                    break;
-                case 5:
-                    break;
+    public static void main(String[] args) throws InputExceptions {
+            Scanner in = new Scanner(System.in);
+            LList ll = new LList();
+            int nu = 0;
+            while (nu != 5) {
+                System.out.println("Выберите действие: \nДобавить элемент = 1 \nВывод элемента = 2 \nВывод всех элементов = 3 \nВывод количества позиций = 4 \nВыход = 5");
+                nu = in.nextInt();
+                switch (nu) {
+                    case 1:
+                        System.out.println("Введите элемент:");
+                        String element = in.next();
+                        ll.add(element);
+                        break;
+                    case 2:
+                        System.out.println("Выберите какой элемент вывести");
+                        int Conclusion = in.nextInt();
+                        if (Conclusion <= 0) {
+                            throw new InputExceptions("Выход за границы листа");
+                        }
+                        System.out.println(ll.get(Conclusion));
+                        break;
+                    case 3:
+                        int Conclusions = ll.size();
+                        for (int i = 1; i <= Conclusions; i++) {
+                            System.out.println(ll.get(i));
+                        }
+                        break;
+                    case 4:
+                        int cout = ll.size();
+                        System.out.println("Всего элементов = " + cout);
+                        break;
+                    case 5:
+                        break;
+                }
+
             }
         }
-    }
 }
 
 class Node {
@@ -79,25 +82,17 @@ class LList {
     }
 
     public Object get(int id) {
-        try {
-            if (id <= 0 ) {
-                throw new IndexOutOfBoundsException();
-            }
+       try {
             Node Value = root;
             for (int i = 0; i < id - 1; i++) {
                 Value = Value.next;
             }
             return Value.data;
-
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Выход за границы листа");
-            return " ";
-        } catch (NullPointerException e) {
-            System.out.println("Выход за границы листа");
-            return " ";
-        }
-
+       } catch (NullPointerException e){
+       return "Этого элемента не существует";
     }
+    }
+
 
     private Node findLast() {
         if (root == null)
