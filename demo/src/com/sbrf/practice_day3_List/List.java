@@ -42,19 +42,19 @@ public class List {
         }
 }
 
-class Node {
-    Object data;
+class Node<T> {
+    T data;
     Node next;
 
-    public Node(Object item){
+    public Node(T item){
         this.data=item;
     }
 }
 
-class LList {
+class LList<T> {
     private Node root;
 
-    public void add(Object obj) {
+    public void add(T obj) {
         if (obj == null)
             return;
         Node node = new Node(obj);
@@ -81,15 +81,15 @@ class LList {
         return count;
     }
 
-    public Object get(int id) {
+    public T get(int id) {
        try {
             Node Value = root;
             for (int i = 0; i < id - 1; i++) {
                 Value = Value.next;
             }
-            return Value.data;
+            return (T) Value.data;
        } catch (NullPointerException e){
-       return "Этого элемента не существует";
+       return (T) "Этого элемента не существует";
     }
     }
 
