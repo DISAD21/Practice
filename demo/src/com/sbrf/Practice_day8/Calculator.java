@@ -8,7 +8,7 @@ public class Calculator {
         return a + b;
     }
     public int sub(int a, int b) {
-        return a + b; // Ошибка для задания 2.b
+        return a - b; // Ошибка для задания 2.b
     }
     public int div(int a, int b) {
         return a % b;
