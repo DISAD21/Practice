@@ -1,4 +1,4 @@
-package com.sbrf.test;
+package Practice_day8_task.test.task1;
 
 import com.sbrf.Practice_day8.Calculator;
 import org.junit.jupiter.api.Test;
