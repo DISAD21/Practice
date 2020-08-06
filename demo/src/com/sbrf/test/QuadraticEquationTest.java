@@ -1,4 +1,4 @@
-package com.sbrf.Practice_day8.test;
+package com.sbrf.test;
 
 import com.sbrf.Practice_day8.QuadraticEquation;
 import org.junit.jupiter.api.Test;
@@ -8,26 +8,32 @@ public class QuadraticEquationTest {
     @Test
     public void testQuadraticEquationOneRoot() {
         QuadraticEquation calculator = new QuadraticEquation();
-        assertEquals( "-2.0", calculator.quadraticEquation(1, 4, 4));
+        String result = calculator.quadraticEquation(1, 4, 4);
+        assertEquals( "-2.0", result, "0.0001");
     }
     @Test
     public void testQuadraticEquationTwoRoot() {
         QuadraticEquation calculator = new QuadraticEquation();
-        assertEquals("-0.06256115465737722 -63.937438845342626", calculator.quadraticEquation(1, 64, 4));
+        String result = calculator.quadraticEquation(1, 64, 4);
+        assertEquals("-0.06256115465737722 -63.937438845342626", result, "0.0001");
     }
     @Test
     public void testQuadraticEquationNoRoot() {
         QuadraticEquation calculator = new QuadraticEquation();
-        assertEquals("Уравнение не имеет квадратных корней", calculator.quadraticEquation(1, 2, 3));
+        String result = calculator.quadraticEquation(1, 2, 3);
+        assertEquals( "Уравнение не имеет квадратных корней", result);
+
     }
     @Test
     public void testQuadraticEquationNaNRoot() {
         QuadraticEquation calculator = new QuadraticEquation();
-        assertEquals("Уравнения нет", calculator.quadraticEquation(0, 0, 0));
+        String result = calculator.quadraticEquation(0, 0, 0);
+        assertEquals( "Уравнения нет", result);
     }
     @Test
     public void testQuadraticEquationNanInfRoot() {
         QuadraticEquation calculator = new QuadraticEquation();
-        assertEquals("Уравнения нет", calculator.quadraticEquation(0, 12, 2));
+        String result = calculator.quadraticEquation(0, 12, 2);
+        assertEquals( "Уравнения нет", result);
     }
 }

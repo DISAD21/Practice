@@ -1,4 +1,4 @@
-package com.sbrf.Practice_day8.test;
+package com.sbrf.test;
 
 import com.sbrf.Practice_day8.Calculator;
 import org.junit.jupiter.api.Test;
@@ -10,18 +10,21 @@ public class CalculatorTest {
     @Test
     public void testSum() {
         Calculator calculator = new Calculator();
-        assertEquals(4, calculator.sum(2, 2));
+        int result = calculator.sum(2, 2);
+        assertEquals( 4, result);
 
     }
     @Test
     public void testSub() {
         Calculator calculator = new Calculator();
-        assertEquals(0, calculator.sub(2, 2));
+        int result = calculator.sub(2, 2);
+        assertEquals( 0, result);
     }
     @Test
     public void testDiv() {
         Calculator calculator = new Calculator();
-        assertEquals(0, calculator.div(6, 3));
+        int result = calculator.div(6, 3);
+        assertEquals( 0, result);
     }
     @Test
     public void testDivByZero() throws IOException {
@@ -33,7 +36,8 @@ public class CalculatorTest {
     @Test
     public void testMul() {
         Calculator calculator = new Calculator();
-        assertEquals(18, calculator.mul(6, 3));
+        int result = calculator.mul(6, 3);
+        assertEquals( 18, result);
     }
 }
 
