@@ -1,4 +1,4 @@
-package Practice_day8_task.test.task2;
+package Practice_day8.test.task2;
 
 import com.sbrf.Practice_day8.QuadraticEquation;
 import org.junit.jupiter.api.Test;
