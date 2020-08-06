@@ -12,7 +12,6 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         int result = calculator.sum(2, 2);
         assertEquals( 4, result);
-
     }
     @Test
     public void testSub() {
